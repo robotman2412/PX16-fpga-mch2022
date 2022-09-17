@@ -16,10 +16,11 @@ clean:
 	rm -rf "$(BUILDDIR)"
 
 build:
+	$(MAKE) -C fpga
 	source "$(IDF_PATH)/export.sh" && idf.py build
 
 install: build
-	python3 tools/webusb_push.py "Template App" build/main.bin --run
+	python3 tools/webusb_push.py "Pixie 16" build/main.bin --run
 
 monitor:
 	source "$(IDF_PATH)/export.sh" && idf.py monitor -p $(PORT)
