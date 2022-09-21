@@ -34,3 +34,9 @@ void disp_flush();
 
 // Exits the app, returning to the launcher.
 void exit_to_launcher();
+
+// Perform an SPI transaction.
+void spi_trns();
+
+// Redraw all graphics.
+void redraw();

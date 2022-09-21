@@ -4,7 +4,7 @@ IDF_PATH ?= $(shell pwd)/esp-idf
 IDF_EXPORT_QUIET ?= 0
 SHELL := /usr/bin/env bash
 
-.PHONY: prepare clean build flash monitor menuconfig
+.PHONY: prepare clean build monitor menuconfig
 
 all: prepare build install
 
